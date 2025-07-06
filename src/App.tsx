@@ -3,7 +3,7 @@ import Search from "./components/Search";
 import Spinner from "./components/Spinner";
 import MovieCard from "./components/MovieCard";
 import { useDebounce } from "react-use";
-import { getTrendingMovies, updateSearchCount } from "./appwrite";
+import { getTrendingMovies, updateSearchCount } from "./appwrite.ts";
 import ErrorMessage from "./components/ErrorMessage.tsx";
 
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
@@ -75,7 +75,6 @@ const App = () => {
       }
     } catch (error) {
       // @ts-expect-error: TMDB error || internet connection error
-
       setErrorMessage(error.message || "Error fetching movies. Please try again later.");
     } finally {
       setIsLoading(false);
@@ -88,6 +87,7 @@ const App = () => {
   
       setTrendingMovies(movies || []);
     } catch (error) {
+      console.log(error)
       // @ts-expect-error: Appwrite error || internet connection error
       setErrorMessage(error.message || "Error fetching trending movies. Please try again later.");
     }
