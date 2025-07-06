@@ -3,7 +3,7 @@ import Search from "./components/Search";
 import Spinner from "./components/Spinner";
 import MovieCard from "./components/MovieCard";
 import { useDebounce } from "react-use";
-import { getTrendingMovies, updateSearchCount } from "./appwrite.ts";
+import { getTrendingMovies, updateSearchCount } from "./lib/firebase.ts";
 import ErrorMessage from "./components/ErrorMessage.tsx";
 
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
@@ -26,9 +26,11 @@ export interface MovieType {
 }
 
 export interface  TrendingMovie {
-  $id: string;
+  id: string;
   poster_url: string;
   searchTerm: string;
+  count:number;
+  movie_id:number;
 }
 
 const App = () => {
@@ -123,7 +125,7 @@ const App = () => {
         
                <ul>
                  {trendingMovies.map((movie, index) => (
-                   <li key={movie.$id}>
+                   <li key={movie.id}>
                      <p>{index + 1}</p>
                      <img src={movie.poster_url} alt={movie.searchTerm} loading={'lazy'} />
                    </li>

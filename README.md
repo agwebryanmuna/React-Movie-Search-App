@@ -35,6 +35,7 @@ Discover your next favorite film! The **Movie Search App** is a sleek, lightning
 
 **Backend & Database:**
 - [Appwrite](https://appwrite.io/) for data storage
+- [Firebase](https://firebase.google.com) for data storage
 
 **APIs:**
 - [TMDB API](https://www.themoviedb.org/documentation/api) for movie data
