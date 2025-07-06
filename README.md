@@ -1,69 +1,56 @@
-# React + TypeScript + Vite
+# 🎬 Movie Search App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p>
+  <img src="public/readme/hero.png" alt="Movie Search App Banner" width="100%" />
+</p>
 
-Currently, two official plugins are available:
+Discover your next favorite film! The **Movie Search App** is a sleek, lightning-fast web application that lets you search for movies in real time, explore trending titles, and enjoy a seamless browsing experience—all powered by modern web technologies.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Live Demo
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+👉 [![Live Demo](https://img.shields.io/badge/Live%20Demo-View%20Site-brightgreen?style=for-the-badge)](https://react-movie-search-app-psi.vercel.app/)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## ✨ Features
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- 🔎 **Real-Time Search:** Instantly find movies as you type
+- 📈 **Trending Section:** Stay updated with the latest popular films
+- 🖼️ **Lazy Image Loading:** Fast, efficient image delivery for smooth browsing
+- 📱 **Responsive Design:** Looks great on any device
+- 💾 **Appwrite Integration:** Secure backend for user and data management
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🛠️ Tech Stack
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+**Frontend:**
+- [React](https://react.dev/) (with [TypeScript](https://www.typescriptlang.org/))
+- [TailwindCSS](https://tailwindcss.com/) for rapid, modern styling
+
+**State Management:**
+- React Context API
+
+**Backend & Database:**
+- [Appwrite](https://appwrite.io/) for data storage
+
+**APIs:**
+- [TMDB API](https://www.themoviedb.org/documentation/api) for movie data
+
+**Development Tools:**
+- [Vite](https://vitejs.dev/) for blazing-fast builds
+- [ESLint](https://eslint.org/) & [Prettier](https://prettier.io/) for code quality
+- [npm](https://www.npmjs.com/) for package management
+
+---
+
+## ⚡ Getting Started
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/agwebryanmuna/React-Movie-Search-App.git
+   cd React-Movie-Search-App
+   npm install
+   npm run dev
